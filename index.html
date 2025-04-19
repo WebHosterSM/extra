@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Extra Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.image-row .image-box {
+  flex: 1 1 calc(50% - 20px); /* Two images per row */
+  max-width: calc(50% - 20px);
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #444;
+  transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+  transform: scale(1.03);
+}
+
+.image-box .description {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+@media (max-width: 480px) {
+  .image-row .image-box {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+
+  .image-box .description {
+    font-size: 14px;
+  }
+}
+
+.circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle-title {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+}
+
+    .circle-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .circle-links a {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 0 10px #333;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    }
+
+    .circle-links a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .circle-links a:hover {
+      transform: scale(1.1);
+      background-color: #333;
+    }
+
+    .video-section iframe {
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16/9;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 10px #333;
+    }
+
+    @media (max-width: 768px) {
+      .circle-links a {
+        width: 80px;
+        height: 80px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+    }
+
+    /* Popup styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px white;
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+<style>
+.video-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  max-width: 420px;
+  margin: auto;
+}
+
+.video-card {
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  aspect-ratio: 9 / 16; /* Makes it shorts-style (vertical) */
+  object-fit: cover;
+}
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 8px;
+}
+</style>
+
+  </style>
+</head>
+<body>
+  <!-- Popup Modal -->
+<div id="popup" class="popup hidden">
+  <span class="close-btn" onclick="closePopup()">&times;</span>
+  <img id="popup-img" src="" alt="Popup Image" />
+</div>
+
+  <h1>Extra Section 🦋</h1>
+<br><br>
+  <!-- Image Grid Section -->
+  <div class="section image-row">
+    <div class="image-box">
+      <img src="1.jpg" alt="Image 1" />
+      <p class="description">Me rushing to see you at Hospital</p>
+    </div>
+    <div class="image-box">
+      <img src="2.jpeg" alt="Image 2" />
+      <p class="description">Poochie Old Pick 🤍
+      </p>
+    </div>
+  </div>
+  
+  <div class="section image-row">
+    <div class="image-box">
+      <img src="3.jpeg" alt="Image 3" />
+      <p class="description">You watching Conjuring
+      </p>
+    </div>
+    <div class="image-box">
+      <img src="4.jpeg" alt="Image 4" />
+      <p class="description">Camera Lover</p>
+    </div>
+    <div class="image-box">
+      <img src="5.jpeg" alt="Image 4" />
+      <p class="description">Sleeping Beauty🥹</p>
+    </div>
+    <div class="image-box">
+      <img src="6.jpeg" alt="Image 6" />
+      <p class="description">Wish I met you as a child 🤍</p>
+    </div>
+    <div class="image-box">
+      <img src="7.jpeg" alt="Image 7" />
+      <p class="description">Daman Trip Cat</p>
+    </div>
+    <div class="image-box">
+      <img src="8.jpeg" alt="Image 8" />
+      <p class="description">You meant a lot</p>
+    </div>
+    <div class="image-box">
+      <img src="9.jpeg" alt="Image 9" />
+      <p class="description">Di's Office Exam Study</p>
+    </div>
+    <div class="image-box">
+      <img src="10.jpeg" alt="Image 10" />
+      <p class="description">Your Personality</p>
+    </div>
+    <div class="image-box">
+      <img src="11.jpeg" alt="Image 11" />
+      <p class="description">Daman You tracked up to hill without using Inhaler that day, Proud Of You.</p>
+    </div>
+    <div class="image-box">
+      <img src="12.jpeg" alt="Image 12" />
+      <p class="description">26 Jan </p>
+    </div>
+    <div class="image-box">
+      <img src="13.jpeg" alt="Image 13" />
+      <p class="description">You liked this in Daman</p>
+    </div>
+    <div class="image-box">
+      <img src="14.jpeg" alt="Image 14" />
+      <p class="description">You gave this to me</p>
+    </div>
+    <div class="image-box">
+      <img src="15.jpg" alt="Image 15" />
+      <p class="description">❤️</p>
+    </div>
+    <div class="image-box">
+      <img src="16.jpg" alt="Image 16" />
+      <p class="description">Congratulations🦋</p>
+    </div>
+    <div class="image-box">
+      <img src="17.jpg" alt="Image 17" />
+      <p class="description">You shared it with me 🤣</p>
+    </div>
+    
+  </div>
+  
+<h1>Some Things I Made 🍂</h1>
+<p>Except that ppt 🤍</p>
+  <!-- Circle Links Section -->
+  <div class="section circle-links">
+    <div class="circle-item">
+      <a href="https://dancing-praline-1e3664.netlify.app/" target="_blank">
+        <img src="portfolio.webp" alt="Portfolio" />
+      </a>
+      <p class="circle-title">Portfolio</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://www.coursera.org/user/8940a79e5e63bcbedb26d34b31aafc43" target="_blank">
+        <img src="coursera.png" alt="Coursera" />
+      </a>
+      <p class="circle-title">Coursera</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://www.credly.com/users/ananya-dey.2656c47f" target="_blank">
+        <img src="ibm.png" alt="IBM" />
+      </a>
+      <p class="circle-title">IBM</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://skillsoft.digitalbadges.skillsoft.com/profile/ananyadey888000/wallet" target="_blank">
+        <img src="skill.png" alt="SkillShare" />
+      </a>
+      <p class="circle-title">Skillsoft</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://drive.google.com/drive/folders/1GIQW-sM-cPvk_rCoG7svVVhFn-NNGaQB" target="_blank">
+        <img src="Infosys.png" alt="Springboard" />
+      </a>
+      <p class="circle-title">Springboard</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://dazzling-kulfi-d79488.netlify.app/" target="_blank">
+        <img src="army.jpg" alt="NCC" />
+      </a>
+      <p class="circle-title">NCC</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://rainbow-creponne-ac3292.netlify.app/" target="_blank">
+        <img src="task.png" alt="TASK" />
+      </a
+      <p class="circle-title">TASK</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://docs.google.com/presentation/d/1IkbMZ8bc0SihVWFhLjiR53ipvY823Y0-/edit?slide=id.p1#slide=id.p1" target="_blank">
+        <img src="self.jpg" alt="GitHub" />
+      </a>
+      <p class="circle-title">Intro PPT</p>
+    </div>
+    <div class="circle-item">
+      <a href="https://github.com/AnanyaDeyPIEMR" target="_blank">
+        <img src="github-logo.webp" alt="GitHub" />
+      </a>
+      <p class="circle-title">GitHub</p>
+    </div>
+  </div>
+  
+  <!-- Video Section -->
+<!-- Shorts-Style Video Section -->
+ <h2>Do have a Watch❤️</h2>
+ <br>
+ <h3>Thats What i felt on April 11 , 2023 ❤️🥹</h3>
+ <br>
+<div class="video-gallery">
+  <div class="video-card">
+    <video controls playsinline>
+      <source src="video1.mp4" type="video/mp4">
+  </div>
+    </video>
+
+  </div>
+  <br>
+  <h3>Looks like Im that Black Dog ..</h3>
+  <br>
+  <div class="video-card">
+    <video controls playsinline>
+      <source src="video2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+   
+  </div>
+ 
+  <br>
+  <h3>Those who overthinks , are the ones who over cares ..🤍</h3>
+  <br>
+  <div class="video-card">
+    <video controls playsinline>
+      <source src="video4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+ 
+  </div>
+
+  <br>
+  <h3>Anyways Lots of Love to You , Do Great Majesty , You means a lot ❤️❤️</h3>
+  <h3>This is for you 🫶</h3>
+  <br>
+  <div class="video-card">
+    <video controls playsinline>
+      <source src="video3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+   
+  </div>
+</div>
+
+
+
+
+  <script>
+    // When image is clicked
+    document.querySelectorAll(".image-box img").forEach(img => {
+      img.addEventListener("click", function () {
+        document.getElementById("popup-img").src = this.src;
+        document.getElementById("popup").classList.remove("hidden");
+      });
+    });
+  
+    // Close popup when clicking outside image
+    document.getElementById("popup").addEventListener("click", function (e) {
+      if (e.target.id === "popup" || e.target.classList.contains("close-btn")) {
+        closePopup();
+      }
+    });
+  
+    function closePopup() {
+      document.getElementById("popup").classList.add("hidden");
+      document.getElementById("popup-img").src = "";
+    }
+  </script>
+  
+</body>
+</html>
